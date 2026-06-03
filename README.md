@@ -1,32 +1,59 @@
-# 🎵 Dreamlikee Records
+# 🎵 Dreamlikee Records - Web Platform
 
-[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
-[![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)](https://vitejs.dev/)
-[![Status](https://img.shields.io/badge/Status-En%20Desarrollo-green?style=for-the-badge)](#)
+[![React](https://img.shields.io/badge/React-18.x-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-4.x-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)](https://vitejs.dev/)
+[![License: Propietaria](https://img.shields.io/badge/License-Proprietary-blue.svg?style=for-the-badge)](#)
 
-> Una plataforma web interactiva y moderna para [describe aquí el propósito principal, ej: una disquera independiente, un catálogo de artistas, un estudio de grabación, etc.].
+> Repositorio oficial del frontend de la plataforma web de **Dreamlikee S.A.S.** 
+> Una solución digital diseñada para centralizar la gestión de nuestro *roster* de artistas, potenciar las campañas de marketing orgánico y facilitar el acceso a la información de los últimos lanzamientos y distribución digital.
+
+---
+
+## 📋 Tabla de Contenidos
+
+- [Descripción General](#descripción-general)
+- [Características Principales](#características-principales)
+- [Stack Tecnológico](#stack-tecnológico)
+- [Prerrequisitos](#prerrequisitos)
+- [Instalación y Configuración Local](#instalación-y-configuración-local)
+- [Despliegue a Producción](#despliegue-a-producción)
+- [Soporte y Contacto](#soporte-y-contacto)
+
+---
 
 ## 📖 Descripción General
 
-Dreamlikee Records es una aplicación web desarrollada para [explicar el problema que resuelve o la experiencia que brinda al usuario]. Su objetivo principal es ofrecer una interfaz intuitiva donde los usuarios puedan [mencionar 1 o 2 acciones clave, ej: escuchar lanzamientos, contactar a los artistas o ver información de la disquera].
+Esta plataforma web está desarrollada para fortalecer la presencia digital del sello. Su objetivo principal es ofrecer una interfaz moderna y eficiente que sirva tanto como catálogo público para los fans, como herramienta de apoyo para las campañas de lanzamientos musicales (como los de "Plan A", "Bendecido", entre otros). Permite visibilizar el talento de nuestros artistas y agilizar la redirección hacia plataformas de distribución como Spotify y Apple Music, trabajando en sinergia con nuestras estrategias en redes sociales.
 
 ## ✨ Características Principales
 
-* **[Característica 1]:** [Breve descripción, ej: Reproductor de audio integrado para escuchar los últimos lanzamientos.]
-* **[Característica 2]:** [Breve descripción, ej: Galería de artistas con perfiles detallados.]
-* **[Característica 3]:** [Breve descripción, ej: Diseño 100% responsivo adaptable a dispositivos móviles y escritorio.]
-* **[Característica 4]:** [Breve descripción, ej: Formulario de contacto directo.]
+* **Catálogo de Artistas:** Perfiles dedicados y actualizados para el roster completo (Joel Brown, Dragón Rojo, Romix, Oscar Molina, Antony Lr y Arom Bt).
+* **Hub de Lanzamientos:** Secciones centralizadas para promocionar nuevos sencillos, videos líricos y material interactivo.
+* **Integración de Distribución:** Enlaces directos optimizados para dirigir el tráfico hacia los perfiles de los artistas y lanzamientos gestionados a través de The Orchard.
+* **Diseño Responsivo:** Interfaz fluida y adaptable a dispositivos móviles, ideal para captar y retener el tráfico proveniente de tendencias en TikTok e Instagram.
 
-## 🛠️ Tecnologías Utilizadas
+## 💻 Stack Tecnológico
 
-* **Frontend:** React.js, [añade otras tecnologías como Tailwind CSS, Bootstrap, Material UI]
-* **Enrutamiento:** React Router Dom (Configurado para trabajar en subdirectorios).
-* **Dependencias principales:** [Menciona aquí librerías importantes como Axios, Framer Motion, etc.]
+- **Core:** React.js / Vite
+- **Navegación:** React Router v6
+- **Estilos:** Tailwind CSS / CSS Modules *(Nota: Ajustar según la librería exacta utilizada en el proyecto)*
+- **Peticiones HTTP:** Axios
 
-## 🚀 Instalación y Despliegue Local
+---
 
-Sigue estos pasos para clonar y ejecutar este proyecto en tu entorno local:
+## ⚙️ Prerrequisitos
 
-1. **Clona el repositorio:**
+Asegúrate de tener instalados los siguientes componentes en tu entorno local antes de continuar:
+
+- **Node.js**: `v18.x` o superior.
+- **Gestor de paquetes**: `npm` o `yarn`.
+- **Git**
+
+---
+
+## 🚀 Instalación y Configuración Local
+
+1. **Clonar el repositorio:**
 ```bash
    git clone [https://github.com/j1andres2ariza/Dreamlikee-Records.git](https://github.com/j1andres2ariza/Dreamlikee-Records.git)
+   cd Dreamlikee-Records
