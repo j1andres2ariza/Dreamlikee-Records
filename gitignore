@@ -30,3 +30,42 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+
+# ---------------------------------------------------
+# CONFIGURACIONES OPERATIVAS Y DE SEGURIDAD
+# ---------------------------------------------------
+
+# Variables de entorno y contraseñas (CRÍTICO)
+.env
+.env.*
+!.env.example
+
+# Archivos multimedia y masters de audio (Saturan el repositorio)
+*.wav
+*.flac
+*.aiff
+*.mp3
+*.m4a
+*.stem.mp4
+
+# Recursos de diseño y proyectos de video (Portadas, videos de letras, renders)
+*.mp4
+*.mov
+*.psd
+*.ai
+*.prproj
+*.aep
+*.tiff
+*.webp
+
+# Documentos administrativos temporales (Metadatos, contratos, reportes)
+# Ignora archivos temporales de Office que se crean al tener un archivo abierto
+~$*.xlsx
+~$*.docx
+~$*.pptx
+
+# Si manejas carpetas específicas locales de exportación, descomenta las siguientes líneas:
+# exportaciones/
+# assets_pesados/
+# metadata_local/
