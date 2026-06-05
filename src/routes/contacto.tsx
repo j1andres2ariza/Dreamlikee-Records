@@ -37,13 +37,12 @@ function ContactoPage() {
         "dreamlikee_service",
         "template_mmy400s",
         {
-          nombre,
-          email,
-          telefono,
-          servicio,
-          mensaje,
+          name: nombre,
+          email: email,
+          phone: telefono,
+          service: servicio,
+          message: mensaje,
         },
-
         "Tz5ybhvyP5bDHOLjP"
       );
 
