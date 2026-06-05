@@ -8,7 +8,7 @@ import mixingImg from "../assets/mixing-session.jpg";
 import artist1 from "../assets/artist-1.jpg";
 import artist2 from "../assets/artist-2.jpg";
 import artist3 from "../assets/artist-3.jpg";
-import joel from "../assets/JoelBrown.jpeg";
+import joel from "../assets/joelbrown.jpeg";
 import oscar from "../assets/oscar.jpeg";
 import romix from "../assets/romix.jpeg";
 import { useRef } from "react";
