@@ -11,13 +11,13 @@
 
 ## 📋 Tabla de Contenidos
 
-- [Descripción General](#descripción-general)
-- [Características Principales](#características-principales)
-- [Stack Tecnológico](#stack-tecnológico)
-- [Prerrequisitos](#prerrequisitos)
-- [Instalación y Configuración Local](#instalación-y-configuración-local)
-- [Despliegue a Producción](#despliegue-a-producción)
-- [Soporte y Contacto](#soporte-y-contacto)
+- [🎵 Dreamlikee Records - Web Platform](#-dreamlikee-records---web-platform)
+  - [📋 Tabla de Contenidos](#-tabla-de-contenidos)
+  - [📖 Descripción General](#-descripción-general)
+  - [✨ Características Principales](#-características-principales)
+  - [💻 Stack Tecnológico](#-stack-tecnológico)
+  - [⚙️ Prerrequisitos](#️-prerrequisitos)
+  - [🚀 Instalación y Configuración Local](#-instalación-y-configuración-local)
 
 ---
 

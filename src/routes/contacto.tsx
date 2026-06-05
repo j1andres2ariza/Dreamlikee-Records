@@ -54,9 +54,12 @@ function ContactoPage() {
       setTelefono("");
       setServicio("Grabación");
       setMensaje("");
-    } catch (error) {
-      console.error("Error enviando correo:", error);
-      alert("No fue posible enviar el mensaje. Por favor intenta nuevamente.");
+    } catch (error: any) {
+      console.error("EmailJS Error:", error);
+      
+      alert(
+        `Error: ${error?.text || error?.message || "Error desconocido"}`
+      );
     } finally {
       setLoading(false);
    }
@@ -96,7 +99,8 @@ function ContactoPage() {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground uppercase tracking-widest">{c.label}</p>
-                  <p className="text-sm text-foreground mt-1">{c.value}</p>
+
+                  <p className="text-sm text-foreground mt-1 whitespace-pre-line">{c.value}</p>
                 </div>
               </div>
             ))}
@@ -118,7 +122,7 @@ function ContactoPage() {
               </div>
             </div>
           </div>
-
+          
           {/* Form */}
           <div className="lg:col-span-3 glass-card p-8">
             {sent ? (
@@ -171,7 +175,11 @@ function ContactoPage() {
                 </div>
                 <div>
                   <label className="block text-xs text-muted-foreground mb-1.5">Servicio de interés</label>
-                  <select className="w-full rounded-lg bg-secondary/60 border border-border px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50">
+                  <select
+                    value={servicio}
+                    onChange={(e) => setServicio(e.target.value)}
+                    className="w-full rounded-lg bg-secondary/60 border border-border px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                  >
                     <option>Grabación</option>
                     <option>Mezcla & Mastering</option>
                     <option>Producción Musical</option>
@@ -183,7 +191,14 @@ function ContactoPage() {
                 </div>
                 <div>
                   <label className="block text-xs text-muted-foreground mb-1.5">Mensaje</label>
-                  <textarea required rows={4} className="w-full rounded-lg bg-secondary/60 border border-border px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none" placeholder="Cuéntanos sobre tu proyecto..." />
+                  <textarea
+                    required
+                    rows={4}
+                    value={mensaje}
+                    onChange={(e) => setMensaje(e.target.value)}
+                    className="w-full rounded-lg bg-secondary/60 border border-border px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none"
+                    placeholder="Cuéntanos sobre tu proyecto..."
+                  />
                 </div>
                 <button type="submit" className="btn-glow w-full text-sm">
                   Enviar mensaje <Send size={16} />
