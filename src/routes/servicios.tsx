@@ -68,7 +68,7 @@ const services = [
     icon: ScrollTextIcon,
     title: "Publishing",
     desc: "Administración editorial y monetización de composiciones musicales a nivel global. Protegemos tus obras y maximizamos tus regalías.",
-    features: ["Registro de obras", "Recaudo internacional", "Licencias y sincronización", "Youtube Content ID", "Gestión de catálogo", "Protección de composiciones"],
+    features: ["Registro de obras ante sociedades de gestión colectiva", "Recaudo internacional", "Licencias y sincronización", "Youtube Content ID", "Gestión de catálogo", "Protección de composiciones"],
   },
 
 ];
