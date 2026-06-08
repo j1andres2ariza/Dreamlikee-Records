@@ -82,7 +82,7 @@ function Index() {
                 className="btn-outline-glow inline-flex items-center gap-2"
               >
                 <Play size={18} />
-                Escucha el roster
+                Ultimo Lanzamiento
               </button>
 
 
