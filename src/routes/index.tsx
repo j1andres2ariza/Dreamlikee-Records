@@ -108,10 +108,10 @@ function Index() {
         <div className="mx-auto max-w-5xl px-6">
           <div className="glass-card grid grid-cols-2 md:grid-cols-4 gap-6 p-8">
             {[
-              { value: "500+", label: "Lanzamientos" },
-              { value: "120+", label: "Artistas firmados" },
-              { value: "50M+", label: "Streams globales" },
-              { value: "8+", label: "Años de experiencia" },
+              { value: "200+", label: "Lanzamientos" },
+              { value: "40+", label: "Artistas firmados" },
+              { value: "5M+", label: "Streams globales" },
+              { value: "2+", label: "Años de experiencia" },
             ].map((s, i) => (
               <div key={i} className="text-center">
                 <p className="text-3xl font-heading font-bold text-gradient">{s.value}</p>
