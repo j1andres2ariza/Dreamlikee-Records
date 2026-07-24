@@ -208,9 +208,9 @@ function Index() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
             {[
-              { img: joel, name: "Joel Brown", genre: "Afrobeats", streams: "2M streams" },
-              { img: romix, name: "Romix", genre: "Salsa", streams: "5M streams" },
-              { img: oscar, name: "Oscar Molina", genre: "Popular", streams: "8M streams" },
+              { img: joel, name: "Joel Brown", genre: "Afrobeats", streams: "600k streams" },
+              { img: romix, name: "Romix", genre: "Salsa", streams: "1.5M streams" },
+              { img: oscar, name: "Oscar Molina", genre: "Popular", streams: "350k streams" },
               
             ].map((a, i) => (
               <div key={i} className="glass-card overflow-hidden group w-full max-w-sm">
