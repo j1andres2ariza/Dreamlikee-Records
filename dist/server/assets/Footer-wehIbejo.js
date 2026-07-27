@@ -268,6 +268,9 @@ function FaInstagram(props) {
 function FaFacebook(props) {
   return GenIcon({ "attr": { "viewBox": "0 0 512 512" }, "child": [{ "tag": "path", "attr": { "d": "M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" }, "child": [] }] })(props);
 }
+function FaSpotify(props) {
+  return GenIcon({ "attr": { "viewBox": "0 0 496 512" }, "child": [{ "tag": "path", "attr": { "d": "M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm103.7 362.1c-4.5 6.9-13.9 8.9-20.8 4.4-57.1-37.2-128.9-45.6-213.4-24.2-7.7 1.5-15.5-3.3-17-11s3.3-15.5 11-17c91.6-18.2 169.1-9.2 231.5 27C408.1 334.1 412.2 353.2 407.7 362.1zm28.3-43.7c-5.6 8.5-17.4 11-25.9 5.4-65.4-42.9-164.9-55.3-242.3-29.3-9 2.5-18.6-2.6-21.1-11.6s2.6-18.6 11.6-21.1c86-24 200 13 274 33.8 8.5 3 11 14.8 5.4 23.8zm2.7-46c-74.9-49.1-199.7-53.7-274-.9-10 6.6-23 .9-29-9s-.9-23 9-29c84.4-55.1 231.6-50.1 317.9 1.1 9.5 6.2 12.3 18.7 6.1 28.2-6.2 9.5-18.7 12.3-28.2 6.1z" }, "child": [] }] })(props);
+}
 function Footer() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("footer", { className: "border-t border-border bg-card/50", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-7xl px-6 py-16", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-1 md:grid-cols-4 gap-10", children: [
@@ -275,9 +278,10 @@ function Footer() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-heading text-xl font-bold text-foreground", children: "Dreamlikee Records" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 text-sm text-muted-foreground max-w-sm leading-relaxed", children: "Estudio de grabación y sello discográfico en Santa Marta, Colombia. Producción, mezcla y distribución global para artistas latinos." }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex gap-4 mt-6", children: [
-          { icon: FaInstagram, href: "https://www.instagram.com/dreamlikeerecords/", label: "IG" },
+          { icon: FaInstagram, href: "https://www.instagram.com/dreamlikeerecords_/", label: "IG" },
           { icon: FaFacebook, href: "https://www.facebook.com/dreamlikeerecords", label: "FB" },
           { icon: FaYoutube, href: "https://www.youtube.com/@DreamlikeeRecords", label: "YT" },
+          { icon: FaSpotify, href: "https://open.spotify.com/user/31nicanzvs6pws4bmmiil7u5fdsa?si=a323a07cc22844fd", label: "SP" },
           { icon: Music, href: "#", label: "SP" }
         ].map((s, i) => /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: s.href, target: "_blank", rel: "noopener noreferrer", className: "flex items-center justify-center w-10 h-10 rounded-full bg-secondary text-muted-foreground hover:text-foreground hover:bg-primary/20 transition-colors", children: /* @__PURE__ */ jsxRuntimeExports.jsx(s.icon, { size: 18 }) }, i)) })
       ] }),
