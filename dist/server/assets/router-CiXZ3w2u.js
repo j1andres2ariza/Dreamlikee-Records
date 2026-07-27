@@ -2726,7 +2726,7 @@ const Route$5 = createRootRoute({
       { name: "twitter:card", content: "summary" }
     ],
     links: [
-      { rel: "stylesheet", href: appCss }
+      { rel: "stylesheet", href: appCss },
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
     ]
   }),
