@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Music } from "lucide-react";
-import { FaInstagram, FaFacebook, FaYoutube, } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaYoutube, FaSpotify, } from "react-icons/fa";
 
 
 export default function Footer() {
@@ -15,9 +15,10 @@ export default function Footer() {
             </p>
             <div className="flex gap-4 mt-6">
               {[
-                { icon: FaInstagram, href: "https://www.instagram.com/dreamlikeerecords/", label: "IG" },
+                { icon: FaInstagram, href: "https://www.instagram.com/dreamlikeerecords_/", label: "IG" },
                 { icon: FaFacebook, href: "https://www.facebook.com/dreamlikeerecords", label: "FB" },
                 { icon: FaYoutube, href: "https://www.youtube.com/@DreamlikeeRecords", label: "YT" },
+                { icon: FaSpotify, href: "https://open.spotify.com/user/31nicanzvs6pws4bmmiil7u5fdsa?si=a323a07cc22844fd", label: "SP" },
                 { icon: Music, href: "#", label: "SP" },
               ].map((s, i) => (
                 <a key={i} href={s.href} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-10 h-10 rounded-full bg-secondary text-muted-foreground hover:text-foreground hover:bg-primary/20 transition-colors">
