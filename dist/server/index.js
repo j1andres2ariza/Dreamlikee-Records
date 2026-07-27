@@ -1,4 +1,4 @@
-import { h, a2 } from "./assets/worker-entry-DcPV3psn.js";
+import { h, a2 } from "./assets/worker-entry-DyetFvql.js";
 import "node:events";
 import "node:async_hooks";
 import "node:stream/web";
