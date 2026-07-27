@@ -1,4 +1,4 @@
-import { P as reactExports, C as isPromise, E as isRedirect, B as isNotFound, x as invariant, f as createControlledPromise, Y as rootRouteId, F as isServer, t as functionalUpdate, a as arraysEqual, g as createLRUCache, d as compileDecodeCharMap, Z as trimPath, X as rewriteBasepath, e as composeRewrites, N as processRouteTree, M as processRouteMasks, W as resolvePath, c as cleanPath, $ as trimPathRight, L as parseHref, o as executeRewriteInput, y as isDangerousProtocol, Q as redirect, s as findSingleMatch, j as deepEqual, D as DEFAULT_PROTOCOL_ALLOWLIST, b as buildRouteBranch, w as interpolatePath, K as nullReplaceEqualDeep, T as replaceEqualDeep, I as last, i as decodePath, q as findFlatMatch, r as findRouteMatch, v as hasKeys, p as executeRewriteOutput, l as encodePathLikeUrl, _ as trimPathLeft, G as joinPaths, a1 as useRouter, k as dummyMatchContext, J as matchContext, U as requireReactDom, n as exactPathTest, S as removeTrailingSlash, R as React, H as jsxRuntimeExports, A as isModuleNotFoundError, a0 as useHydrated, m as escapeHtml, z as isInlinableStylesheet, u as getAssetCrossOrigin, V as resolveManifestAssetLink, O as Outlet } from "./worker-entry-DyetFvql.js";
+import { P as reactExports, C as isPromise, E as isRedirect, B as isNotFound, x as invariant, f as createControlledPromise, Y as rootRouteId, F as isServer, t as functionalUpdate, a as arraysEqual, g as createLRUCache, d as compileDecodeCharMap, Z as trimPath, X as rewriteBasepath, e as composeRewrites, N as processRouteTree, M as processRouteMasks, W as resolvePath, c as cleanPath, $ as trimPathRight, L as parseHref, o as executeRewriteInput, y as isDangerousProtocol, Q as redirect, s as findSingleMatch, j as deepEqual, D as DEFAULT_PROTOCOL_ALLOWLIST, b as buildRouteBranch, w as interpolatePath, K as nullReplaceEqualDeep, T as replaceEqualDeep, I as last, i as decodePath, q as findFlatMatch, r as findRouteMatch, v as hasKeys, p as executeRewriteOutput, l as encodePathLikeUrl, _ as trimPathLeft, G as joinPaths, a1 as useRouter, k as dummyMatchContext, J as matchContext, U as requireReactDom, n as exactPathTest, S as removeTrailingSlash, R as React, H as jsxRuntimeExports, A as isModuleNotFoundError, a0 as useHydrated, m as escapeHtml, z as isInlinableStylesheet, u as getAssetCrossOrigin, V as resolveManifestAssetLink, O as Outlet } from "./worker-entry-Cw1RKzZk.js";
 var reactUse = reactExports.use;
 function useForwardedRef(ref) {
   const innerRef = reactExports.useRef(null);
@@ -2727,6 +2727,7 @@ const Route$5 = createRootRoute({
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "icon", href: "/favicon2.ico", type: "image/x-icon" }
     ]
   }),
   shellComponent: RootShell,
@@ -2745,7 +2746,7 @@ function RootShell({ children }) {
 function RootComponent() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(Outlet, {});
 }
-const $$splitComponentImporter$4 = () => import("./servicios-DYVv2-j4.js");
+const $$splitComponentImporter$4 = () => import("./servicios-BGH17sGe.js");
 const Route$4 = createFileRoute("/servicios")({
   head: () => ({
     meta: [{
@@ -2763,7 +2764,7 @@ const Route$4 = createFileRoute("/servicios")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
-const $$splitComponentImporter$3 = () => import("./estudio-gNO402-M.js");
+const $$splitComponentImporter$3 = () => import("./estudio-C7AA9Oc7.js");
 const Route$3 = createFileRoute("/estudio")({
   head: () => ({
     meta: [{
@@ -2781,7 +2782,7 @@ const Route$3 = createFileRoute("/estudio")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$3, "component")
 });
-const $$splitComponentImporter$2 = () => import("./contacto-BrIizOmQ.js");
+const $$splitComponentImporter$2 = () => import("./contacto-DrMwGby1.js");
 const Route$2 = createFileRoute("/contacto")({
   head: () => ({
     meta: [{
@@ -2799,7 +2800,7 @@ const Route$2 = createFileRoute("/contacto")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-const $$splitComponentImporter$1 = () => import("./artistas-IoE6bmaE.js");
+const $$splitComponentImporter$1 = () => import("./artistas-CZ9gyW6F.js");
 const Route$1 = createFileRoute("/artistas")({
   head: () => ({
     meta: [{
@@ -2817,7 +2818,7 @@ const Route$1 = createFileRoute("/artistas")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./index-B2hWtQ_1.js");
+const $$splitComponentImporter = () => import("./index-DJ9-4TXf.js");
 const Route2 = createFileRoute("/")({
   component: lazyRouteComponent($$splitComponentImporter, "component")
 });

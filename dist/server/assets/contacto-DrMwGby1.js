@@ -1,10 +1,10 @@
-import { P as reactExports, H as jsxRuntimeExports } from "./worker-entry-DyetFvql.js";
-import { e as createLucideIcon, H as Header, a as FaInstagram, F as FaFacebook, c as FaYoutube, b as FaWhatsapp, M as Music, d as Footer } from "./Footer-DWyWmOPo.js";
+import { P as reactExports, H as jsxRuntimeExports } from "./worker-entry-Cw1RKzZk.js";
+import { e as createLucideIcon, H as Header, a as FaInstagram, F as FaFacebook, c as FaYoutube, b as FaWhatsapp, M as Music, d as Footer } from "./Footer-wehIbejo.js";
 import "node:events";
 import "node:async_hooks";
 import "node:stream/web";
 import "node:stream";
-import "./router-CiXZ3w2u.js";
+import "./router-CJFiHxJz.js";
 const __iconNode$4 = [
   ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
   ["path", { d: "M12 6v6l4 2", key: "mmk7yg" }]
