@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <h3 className="font-heading text-xl font-bold text-foreground">Dreamlikee Records</h3>
             <p className="mt-3 text-sm text-muted-foreground max-w-sm leading-relaxed">
-              Estudio de grabación y sello discográfico en Santa Marta, Colombia. Producción, mezcla y distribución global para artistas latinos.
+              Sello discográfico y estudio de grabación en Santa Marta, Colombia, enfocado en desarrollar artistas y crear música con identidad. Producción, grabación, mezcla y distribución global para conectar el talento latino con el mundo.
             </p>
             <div className="flex gap-4 mt-6">
               {[
