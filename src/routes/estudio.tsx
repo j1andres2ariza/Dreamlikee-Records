@@ -34,7 +34,7 @@ function EstudioPage() {
             Donde la <span className="text-gradient">magia</span> sucede
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Un espacio diseñado para la creatividad, equipado con tecnología de vanguardia y un ambiente que inspira a los artistas.
+            Más que un estudio, un ecosistema de inspiración: tecnología de vanguardia, diseño acústico superior y un ambiente pensado para desatar el verdadero potencial del artista.
           </p>
         </div>
       </section>
@@ -47,7 +47,7 @@ function EstudioPage() {
             <img src={mixingImg} alt="Mezcla" width={800} height={600} loading="lazy" className="rounded-2xl object-cover w-full h-64" />
             <div className="rounded-2xl bg-gradient-to-br from-primary/20 to-accent/10 h-64 flex flex-col items-center justify-center gap-4 lg:col-span-2">
               <Disc3 size={64} className="text-primary animate-spin" style={{ animationDuration: '5s' }} />
-              <p className="font-heading text-xl font-semibold text-foreground">+500 canciones producidas</p>
+              <p className="font-heading text-xl font-semibold text-foreground">+200 canciones producidas</p>
             </div>
           </div>
         </div>

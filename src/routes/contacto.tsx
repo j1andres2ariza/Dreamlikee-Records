@@ -70,12 +70,12 @@ function ContactoPage() {
 
       <section className="pt-32 pb-20 px-6">
         <div className="mx-auto max-w-7xl text-center pt-16">
-          <p className="text-sm font-medium text-primary uppercase tracking-widest mb-3">Contacto</p>
+          <p className="text-sm font-medium text-primary uppercase tracking-widest mb-3">Bienvenido</p>
           <h1 className="section-heading text-5xl md:text-6xl text-foreground">
             Hablemos de tu <span className="text-gradient">proyecto</span>
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-            ¿Tienes una idea? ¿Quieres grabar? Escríbenos y hagamos realidad tu visión musical.
+            El primer paso hacia tu próximo éxito musical comienza aquí. Cuéntanos tu proyecto y hagamos historia juntos.
           </p>
         </div>
       </section>

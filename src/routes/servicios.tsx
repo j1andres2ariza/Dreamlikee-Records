@@ -85,7 +85,7 @@ function ServiciosPage() {
             Soluciones <span className="text-gradient">completas</span>
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Desde la grabación hasta la distribución, ofrecemos todo lo que necesitas para llevar tu música al mundo.
+            Desde la primera toma hasta el éxito global: un proceso 360° para llevar tu música a todas las plataformas del mundo.
           </p>
         </div>
       </section>

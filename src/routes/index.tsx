@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Mic, Music, Headphones, Radio, Disc3, Users, ArrowRight, Play, Star, Sparkles, TrendingUp, Globe } from "lucide-react";
+import { Mic, Music, Pause, Headphones, Radio, Disc3, Users, ArrowRight, Play, Star, Sparkles, TrendingUp, Globe } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import heroImg from "../assets/hero-studio.jpg";
@@ -11,7 +11,7 @@ import artist3 from "../assets/artist-3.jpg";
 import joel from "../assets/joel.jpeg";
 import oscar from "../assets/oscar.jpeg";
 import romix from "../assets/romix.jpeg";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -19,12 +19,19 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
 
-      <audio ref={audioRef}>
-        <source src="/music/intro.mp3" type="audio/mpeg" />
+      <audio 
+        ref={audioRef}
+        onPlay={() => setIsPlaying(true)}
+        onPause={() => setIsPlaying(false)}
+        onEnded={() => setIsPlaying(false)}
+      >
+        <source src="/music/layno.mp3" type="audio/mpeg" />
       </audio>
 
       {/* Hero */}
@@ -51,11 +58,72 @@ function Index() {
             </div>
             <h1 className="relative">
               <span className="block mega-title animate-reveal-clip">DREAMLIKEE</span>
-              <span className="block mega-title-outline animate-reveal-clip" style={{ animationDelay: "0.2s" }}>RECORDS<span className="caret" /></span>
+              <span className="block mega-title-outline animate-reveal-clip" style={{ 
+                animationDelay: "0.2s",
+                filter: "drop-shadow(0 0 12px rgba(255, 255, 255, 1)) drop-shadow(0 0 25px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 45px rgba(255, 255, 255, 0.4))"
+            }}>
+              RECORDS<span className="caret" />
+            </span>
               <span className="absolute -inset-x-4 -inset-y-2 -z-10 blur-3xl opacity-30 bg-gradient-to-r from-white/10 via-white/5 to-transparent" />
             </h1>
+
+            {/* Disco de vinilo girando */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute right-6 top-1/2 hidden -translate-y-1/2 lg:block"
+            >
+              <div
+                className="relative h-64 w-64 rounded-full border border-white/20"
+                style={{
+                  animation: "dreamlikeeSpin 8s linear infinite",
+                  background:
+                    "repeating-radial-gradient(circle, #111 0px, #111 3px, #333 4px, #111 5px)",
+                  boxShadow: "0 0 35px rgba(255,255,255,0.12)",
+                }}
+              >
+                <div
+                  className="absolute inset-0 rounded-full"
+                  style={{
+                    background:
+                      "conic-gradient(transparent, rgba(255,255,255,0.25), transparent, rgba(255,255,255,0.15), transparent)",
+                  }}
+                />
+
+                <div className="absolute inset-[28%] overflow-hidden rounded-full border border-white/30">
+                  <img
+                    src="/portada.jpg"
+                    alt=""
+                    className="h-full w-full object-cover"
+                  />
+
+                  {/* Agujero central del vinilo */}
+                  <div className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/40 bg-black" />
+                </div>
+              </div>
+            </div>
+
+            <style>{`
+              @keyframes dreamlikeeSpin {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+              }
+
+              @media (prefers-reduced-motion: reduce) {
+                [style*="dreamlikeeSpin"] {
+                  animation: none !important;
+                }
+              }
+            `}</style>
+            
+            
+
+
+
+
             <p className="mt-8 text-lg text-muted-foreground max-w-xl leading-relaxed">
-              Firmamos, producimos y distribuimos a la nueva generación de artistas latinos. Desarrollo artístico integral, distribución global y promoción en plataformas.
+              <strong>El epicentro del nuevo sonido latino.</strong> <br/>
+              Conectamos el talento de compositores, productores y artistas bajo un modelo de desarrollo integral, distribución global y promoción de alto impacto.
+              ¿Buscas el socio perfecto para tu próximo lanzamiento, catálogo o proyecto? Creemos el futuro juntos.
             </p>
             {/* Live equalizer accent */}
             <div className="mt-8 flex items-end h-8">
@@ -68,7 +136,6 @@ function Index() {
                 Firma con nosotros <ArrowRight size={18} />
               </Link>
 
-
               <button
                 onClick={() => {
                   if (audioRef.current) {
@@ -79,13 +146,13 @@ function Index() {
                     }
                   }
                 }}
-                className="btn-outline-glow inline-flex items-center gap-2"
+                className={`btn-outline-glow inline-flex items-center gap-2 transition-all duration-300 ${
+                  isPlaying ? "border-primary/80 text-white bg-primary/10 shadow-[0_0_20px_rgba(255,255,255,0.2)]" : ""
+                }`}
               >
-                <Play size={18} />
-                Ultimo Lanzamiento
+                {isPlaying ? <Pause size={18} className="text-primary animate-pulse" /> : <Play size={18} />}
+                {isPlaying ? "Reproduciendo: Intro" : "Ultimo Lanzamiento"}
               </button>
-
-
             </div>
           </div>
         </div>
@@ -110,7 +177,7 @@ function Index() {
             {[
               { value: "200+", label: "Lanzamientos" },
               { value: "40+", label: "Artistas firmados" },
-              { value: "5M+", label: "Streams globales" },
+              { value: "6M+", label: "Streams globales" },
               { value: "2+", label: "Años de experiencia" },
             ].map((s, i) => (
               <div key={i} className="text-center">
@@ -171,7 +238,7 @@ function Index() {
                 Donde nacen<br /><span className="text-gradient">los hits</span>
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Cada artista firmado tiene acceso ilimitado a nuestro estudio insignia: consolas analógicas, monitoreo de referencia y un equipo creativo residente para llevar tu visión a master final.
+                Un santuario para crear sin límites. Ponemos a disposición de nuestros artistas firmados un estudio insignia equipado con consolas analógicas, monitoreo de precisión y un equipo creativo residente. Todo lo que necesitas para transformar tu visión artística en un hit listo para plataformas.
               </p>
               <div className="space-y-4">
                 {["Consola SSL profesional", "Micrófonos Neumann & AKG", "Monitores Genelec 8351", "Pro Tools HDX & Logic Pro", "Cabinas con aislamiento clase A"].map((item, i) => (
@@ -211,7 +278,6 @@ function Index() {
               { img: joel, name: "Joel Brown", genre: "Afrobeats", streams: "600k streams" },
               { img: romix, name: "Romix", genre: "Salsa", streams: "1.5M streams" },
               { img: oscar, name: "Oscar Molina", genre: "Popular", streams: "350k streams" },
-              
             ].map((a, i) => (
               <div key={i} className="glass-card overflow-hidden group w-full max-w-sm">
                 <div className="overflow-hidden relative">
