@@ -124,7 +124,7 @@ function ContactoPage() {
               <p className="text-xs text-zinc-400 uppercase tracking-widest mb-4">Redes Sociales</p>
               <div className="flex gap-3">
                 {[
-                  { icon: FaInstagram, label: "Instagram", href: "https://www.instagram.com/dreamlikeerecords/" },
+                  { icon: FaInstagram, label: "Instagram", href: "https://www.instagram.com/dreamlikeerecords_/" },
                   { icon: FaFacebook, label: "Facebook", href: "https://www.facebook.com/dreamlikeerecords" },
                   { icon: FaYoutube, label: "YouTube", href: "https://www.youtube.com/@DreamlikeeRecords" },
                   { icon: FaWhatsapp, label: "WhatsApp", href: "https://wa.me/573104400955?text=Hola,%20buen%20día.%20Me%20comunico%20desde%20la%20página%20web%20de%20Dreamlikee%20Records%20porque%20estoy%20interesado%20en%20recibir%20información%20sobre%20sus%20servicios%20y%20proyectos%20musicales.%20Quedo%20atento%20a%20su%20respuesta.%20Muchas%20gracias." },
