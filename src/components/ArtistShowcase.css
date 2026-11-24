@@ -147,7 +147,6 @@
 }
 
 .artist-quote-link:hover { background: #54df89; border-color: #54df89; }
-.artist-profile-copy > .artist-quote-link { width: 100%; margin-top: 1.5rem; }
 
 .artist-controls {
   display: flex;
