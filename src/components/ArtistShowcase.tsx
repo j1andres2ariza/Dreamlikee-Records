@@ -244,6 +244,7 @@ export default function ArtistShowcase() {
             <p className="artist-genre">{active.genre}</p>
             <DialogTitle className="artist-profile-title">{active.name}</DialogTitle>
             <DialogDescription className="artist-profile-bio">{active.bio}</DialogDescription>
+            <ArtistQuoteLink artistName={active.name} onClick={() => setPlaying(false)} />
             {active.tracks.some((track) => track.trim()) && (
               <div className="artist-tracks">
                 <h3>Canciones destacadas</h3>
