@@ -68,11 +68,13 @@
   height: 100%;
   object-fit: contain;
   object-position: center bottom;
-  transition: transform 500ms ease;
+  transform: scale(1);
+  transform-origin: center bottom;
+  transition: transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
   pointer-events: none;
 }
 
-.artist-portrait:hover .artist-portrait-image img { transform: scale(1.035); }
+.artist-portrait[data-active="true"] .artist-portrait-image img { transform: scale(1.18); }
 
 .artist-portrait-name {
   position: absolute;
