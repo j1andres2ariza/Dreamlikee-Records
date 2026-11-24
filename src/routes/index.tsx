@@ -2,15 +2,13 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Mic, Music, Pause, Headphones, Radio, Disc3, Users, ArrowRight, Play, Star, Sparkles, TrendingUp, Globe } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import ArtistShowcase from "../components/ArtistShowcase";
 import heroImg from "../assets/hero-studio.jpg";
 import boothImg from "../assets/studio-booth.jpg";
 import mixingImg from "../assets/mixing-session.jpg";
 import artist1 from "../assets/artist-1.jpg";
 import artist2 from "../assets/artist-2.jpg";
 import artist3 from "../assets/artist-3.jpg";
-import joel from "../assets/joel.jpeg";
-import oscar from "../assets/oscar.jpeg";
-import romix from "../assets/romix.jpeg";
 import { useRef, useState } from "react";
 
 export const Route = createFileRoute("/")({
@@ -265,38 +263,18 @@ function Index() {
       </section>
 
       {/* Artists preview */}
-      <section className="relative py-28 px-6 overflow-hidden">
+      <section className="relative py-20 md:py-28 overflow-hidden">
         <div className="animated-bg opacity-70" />
         <div className="relative">
         <div className="mx-auto max-w-7xl">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4 px-6">
             <p className="text-sm font-medium text-primary uppercase tracking-widest mb-3">Roster oficial</p>
             <h2 className="section-heading text-4xl md:text-5xl text-foreground">Artistas <span className="text-gradient">del sello</span></h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
-            {[
-              { img: joel, name: "Joel Brown", genre: "Afrobeats", streams: "600k streams" },
-              { img: romix, name: "Romix", genre: "Salsa", streams: "1.5M streams" },
-              { img: oscar, name: "Oscar Molina", genre: "Popular", streams: "350k streams" },
-            ].map((a, i) => (
-              <div key={i} className="glass-card overflow-hidden group w-full max-w-sm">
-                <div className="overflow-hidden relative">
-                  <img src={a.img} alt={a.name} width={600} height={600} loading="lazy" className="w-full h-72 object-contain object-center group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-                  <span className="absolute top-4 left-4 inline-flex items-center gap-1.5 rounded-full bg-background/70 backdrop-blur px-3 py-1 text-[10px] font-medium text-primary border border-primary/30">
-                    <Sparkles size={10} /> {a.streams}
-                  </span>
-                </div>
-                <div className="p-6">
-                  <h3 className="font-heading text-lg font-semibold text-foreground">{a.name}</h3>
-                  <p className="text-sm text-muted-foreground mt-1">{a.genre}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <ArtistShowcase />
           <div className="text-center mt-12">
             <Link to="/artistas" className="btn-outline-glow text-sm">
-              Ver todos los artistas <ArrowRight size={16} />
+              Explorar nuestros artistas
             </Link>
           </div>
         </div>

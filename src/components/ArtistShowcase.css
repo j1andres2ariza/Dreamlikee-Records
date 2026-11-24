@@ -1,0 +1,241 @@
+.artist-page-section {
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  overflow: hidden;
+}
+
+.artist-showcase {
+  --artist-radius: min(34vw, 25rem);
+  position: relative;
+  isolation: isolate;
+  padding: 0 1.5rem 1rem;
+}
+
+.artist-orbit-stage {
+  position: relative;
+  height: 28rem;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.artist-orbit-glow {
+  position: absolute;
+  inset: 12% 10% 0;
+  background: radial-gradient(ellipse, rgb(255 255 255 / 7%), transparent 65%);
+  pointer-events: none;
+}
+
+.artist-orbit-ring {
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  width: 82%;
+  height: 26%;
+  border: 1px solid rgb(255 255 255 / 9%);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 15px 45px rgb(255 255 255 / 3%);
+  pointer-events: none;
+}
+
+.artist-portrait {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: clamp(11rem, 22vw, 15rem);
+  height: clamp(14rem, 28vw, 19rem);
+  border: 0;
+  border-radius: 1rem;
+  padding: 0;
+  background: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+  will-change: transform;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.artist-portrait-image {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 1rem;
+  mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
+}
+
+.artist-portrait-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  transition: transform 500ms ease;
+  pointer-events: none;
+}
+
+.artist-portrait:hover .artist-portrait-image img { transform: scale(1.035); }
+
+.artist-portrait-name {
+  position: absolute;
+  bottom: 0.8rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 10px black;
+  transition: opacity 200ms ease;
+}
+
+.artist-portrait[data-active="true"] .artist-portrait-name { opacity: 0; }
+
+.artist-spotlight {
+  position: relative;
+  text-align: center;
+  min-height: 10rem;
+}
+
+.artist-spotlight-copy { animation: artist-copy-in 450ms ease both; }
+
+.artist-genre {
+  color: var(--primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.artist-spotlight h2 {
+  margin: 0.35rem 0 1.25rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+}
+
+.artist-profile-button {
+  min-height: 2.75rem;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.artist-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.artist-control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  border: 1px solid rgb(255 255 255 / 16%);
+  border-radius: 50%;
+  background: rgb(255 255 255 / 3%);
+  color: var(--foreground);
+  transition: background 200ms, border-color 200ms;
+  cursor: pointer;
+}
+
+.artist-control:hover { background: rgb(255 255 255 / 12%); border-color: rgb(255 255 255 / 40%); }
+.artist-control:disabled { opacity: 0.35; cursor: default; }
+.artist-control-divider { width: 1px; height: 1.25rem; background: rgb(255 255 255 / 15%); margin: 0 0.25rem; }
+.artist-counter { min-width: 4rem; font-size: 0.875rem; font-variant-numeric: tabular-nums; color: var(--muted-foreground); }
+.artist-counter span { color: var(--foreground); }
+.artist-hint { margin-top: 1rem; text-align: center; font-size: 0.875rem; color: var(--muted-foreground); }
+
+.artist-roster {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: 56rem;
+  margin: 2rem auto 0;
+}
+
+.artist-roster button {
+  min-height: 2.75rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 2rem;
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+  background: transparent;
+  transition: color 200ms, background 200ms, border-color 200ms;
+  cursor: pointer;
+}
+
+.artist-roster button:hover { color: var(--foreground); background: rgb(255 255 255 / 5%); }
+.artist-roster button[aria-pressed="true"] { color: var(--foreground); border-color: rgb(255 255 255 / 25%); background: rgb(255 255 255 / 6%); }
+
+.artist-showcase button:focus-visible,
+.artist-profile a:focus-visible {
+  outline: 2px solid var(--foreground);
+  outline-offset: 5px;
+}
+
+.artist-profile {
+  width: calc(100% - 2rem);
+  max-width: 56rem;
+  max-height: 90dvh;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 0;
+  padding: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 1rem;
+  background: #090909;
+}
+
+.artist-profile-photo { min-height: 28rem; }
+.artist-profile-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.artist-profile-copy { padding: 3rem 2.5rem; align-self: center; }
+.artist-profile-title { margin: 0.5rem 0 1rem; font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 600; line-height: 1.1; }
+.artist-profile-bio { color: #a3a3a3; font-size: 1rem; line-height: 1.75; }
+.artist-tracks { margin-top: 1.75rem; }
+.artist-tracks h3 { color: #b5b5b5; font-size: 0.875rem; margin-bottom: 0.75rem; font-weight: 500; }
+.artist-tracks li { display: flex; align-items: center; gap: 0.75rem; padding: 0.7rem 0; border-bottom: 1px solid rgb(255 255 255 / 8%); font-size: 0.875rem; }
+.artist-tracks svg { flex-shrink: 0; color: #999; }
+.artist-platforms { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.75rem; }
+.artist-platforms a { padding: 0.6rem 1rem; font-size: 0.875rem; min-height: 2.75rem; }
+
+@keyframes artist-copy-in {
+  from { opacity: 0; transform: translateY(0.5rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (min-width: 1440px) {
+  .artist-showcase { --artist-radius: 27rem; }
+}
+
+@media (max-width: 639px) {
+  .artist-page-section { padding-top: 8rem; padding-bottom: 3rem; }
+  .artist-showcase { --artist-radius: 33vw; padding-inline: 1rem; }
+  .artist-orbit-stage { height: 23rem; }
+  .artist-portrait { width: 11.5rem; height: 14.5rem; }
+  .artist-spotlight { min-height: 9.5rem; }
+  .artist-roster { gap: 0.25rem; margin-top: 1.5rem; }
+  .artist-roster button { padding-inline: 0.8rem; }
+  .artist-profile { grid-template-columns: minmax(0, 1fr); }
+  .artist-profile-photo { min-height: 0; height: 17rem; }
+  .artist-profile-photo img { object-position: center 20%; }
+  .artist-profile-copy { padding: 1.75rem 1.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .artist-showcase *, .artist-profile, .artist-profile * {
+    animation: none !important;
+    transition: none !important;
+  }
+  .artist-portrait { will-change: auto; }
+}
