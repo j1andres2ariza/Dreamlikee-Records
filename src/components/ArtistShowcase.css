@@ -122,6 +122,33 @@
   cursor: pointer;
 }
 
+.artist-spotlight-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.artist-quote-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0.65rem 1.15rem;
+  border: 1px solid #25d366;
+  border-radius: var(--radius);
+  background: #25d366;
+  color: #052e16;
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background 200ms, border-color 200ms;
+}
+
+.artist-quote-link:hover { background: #54df89; border-color: #54df89; }
+.artist-profile-copy > .artist-quote-link { width: 100%; margin-top: 1.5rem; }
+
 .artist-controls {
   display: flex;
   justify-content: center;
@@ -177,6 +204,7 @@
 .artist-roster button[aria-pressed="true"] { color: var(--foreground); border-color: rgb(255 255 255 / 25%); background: rgb(255 255 255 / 6%); }
 
 .artist-showcase button:focus-visible,
+.artist-showcase a:focus-visible,
 .artist-profile a:focus-visible {
   outline: 2px solid var(--foreground);
   outline-offset: 5px;

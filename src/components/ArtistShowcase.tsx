@@ -1,12 +1,32 @@
 import { useEffect, useId, useRef, useState } from "react";
 import type { KeyboardEvent, PointerEvent } from "react";
 import { ChevronLeft, ChevronRight, ExternalLink, Music2, Pause, Play } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { artists } from "../data/artists";
 import { nearestPosition, orbitStyle, wrapIndex } from "../lib/artist-orbit";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "./ui/dialog";
 
 const ROTATION_DELAY = 5000;
 const TRANSITION_DURATION = 950;
+
+function ArtistQuoteLink({ artistName, onClick }: { artistName: string; onClick: () => void }) {
+  const name = artistName.trim().replace(/\s+/g, " ");
+  const message = `Hola, vengo de dreamlikee.com y quisiera cotizar la contratación de ${name} para un evento.\n\nFecha del evento:\nCiudad:\nTipo de evento:\n\n¿Podrían indicarme disponibilidad y tarifas? Gracias.`;
+
+  return (
+    <a
+      href={`https://wa.me/573104400955?text=${encodeURIComponent(message)}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="artist-quote-link"
+      aria-label={`Cotizar a ${name} por WhatsApp (abre en otra pestaña)`}
+      onClick={onClick}
+    >
+      <FaWhatsapp size={20} aria-hidden="true" />
+      Cotizar por WhatsApp
+    </a>
+  );
+}
 
 export default function ArtistShowcase() {
   const [position, setPosition] = useState(0);
@@ -177,9 +197,12 @@ export default function ArtistShowcase() {
           <p className="artist-genre">{active.genre}</p>
           <h2>{active.name}</h2>
         </div>
-        <button ref={profileButton} type="button" className="btn-outline-glow artist-profile-button" onClick={openProfile}>
-          Conocer artista
-        </button>
+        <div className="artist-spotlight-actions">
+          <button ref={profileButton} type="button" className="btn-outline-glow artist-profile-button" onClick={openProfile}>
+            Conocer artista
+          </button>
+          <ArtistQuoteLink artistName={active.name} onClick={() => setPlaying(false)} />
+        </div>
       </div>
 
       <div className="artist-controls">
@@ -221,6 +244,7 @@ export default function ArtistShowcase() {
             <p className="artist-genre">{active.genre}</p>
             <DialogTitle className="artist-profile-title">{active.name}</DialogTitle>
             <DialogDescription className="artist-profile-bio">{active.bio}</DialogDescription>
+            <ArtistQuoteLink artistName={active.name} onClick={() => setPlaying(false)} />
             {active.tracks.some((track) => track.trim()) && (
               <div className="artist-tracks">
                 <h3>Canciones destacadas</h3>
